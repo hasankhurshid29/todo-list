@@ -1,23 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
+import AddNewTodo from './components/AddNewTodo';
+import TodoList from './components/TodoList';
+import { Divider } from '@material-ui/core';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>ToDo List</h1>
+      <div style={{width: 400}}>
+      <AddNewTodo />
+      <Divider style={{margin: '20px 0px'}}/>
+      <TodoList />
+      </div>
     </div>
   );
 }
